@@ -1168,7 +1168,7 @@ class MainWindow(QMainWindow):
             self.ui.label_9.setText(QCoreApplication.translate("MainWindow", u"הזן 4", None))
             self.ui.Input2.setText(QCoreApplication.translate("MainWindow", u"הזן 2", None))
             self.ui.Inpu1.setText(QCoreApplication.translate("MainWindow", u"הזן 1", None))
-        elif langu == u"ほん":
+        elif langu == u"\u307b\u3093 ":
             self.ui.title.setText(QCoreApplication.translate("MainWindow", u"面積と体積の計算機", None))
             self.ui.comboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"面積 - 正方形", None))
             self.ui.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"面積 - 長方形", None))

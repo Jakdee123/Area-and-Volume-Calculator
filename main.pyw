@@ -445,7 +445,7 @@ class Ui_MainWindow(object):
         self.plainTextEdit_3.setGeometry(QRect(180, 130, 90, 31))
         sizePolicy.setHeightForWidth(self.plainTextEdit_3.sizePolicy().hasHeightForWidth())
         self.plainTextEdit_3.setSizePolicy(sizePolicy)
-        self.plainTextEdit_3.viewport().setProperty("cursor", QCursor(Qt.ForbiddenCursor))
+        self.plainTextEdit_3.viewport().setProperty("cursor", QCursor(Qt.IBeamCursor))
         self.plainTextEdit_3.setInputMethodHints(Qt.ImhDialableCharactersOnly|Qt.ImhDigitsOnly|Qt.ImhPreferNumbers)
         self.plainTextEdit_3.setReadOnly(True)
         self.label_6 = QLabel(self.centralwidget)
@@ -535,7 +535,7 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(51, QCoreApplication.translate("MainWindow", u"Volume - Octagonal pyramid", None))
         self.comboBox_2.setItemText(52, QCoreApplication.translate("MainWindow", u"Volume - Nonagonal pyramid", None))
         self.comboBox_2.setItemText(53, QCoreApplication.translate("MainWindow", u"Volume - Decagonal pyramid", None))
-        self.comboBox_2.setItemText(54, QCoreApplication.translate("MainWindow", u"Volume - Star prism pyramid", None))
+        self.comboBox_2.setItemText(54, QCoreApplication.translate("MainWindow", u"Volume - Star prism", None))
         self.comboBox_2.setItemText(55, QCoreApplication.translate("MainWindow", u"Volume - Isosceles triangular bipyramid", None))
         self.comboBox_2.setItemText(56, QCoreApplication.translate("MainWindow", u"Volume - Scalene triangular bipyramid", None))
         self.comboBox_2.setItemText(57, QCoreApplication.translate("MainWindow", u"Volume - Equilateral triangular bipyramid", None))
@@ -574,134 +574,124 @@ class MainWindow(QMainWindow):
         # Add any additional setup or functionality here
 
     def solve(self):
-        if mainshape.shape in square:
+        if mainshape.shape in u"Area - Square":
+            self.answer.setText(str())
+        elif mainshape.shape in u"Area - Rectangle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Circle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Isosceles triangle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Scalene triangle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Equilateral triangle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Pentagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Hexagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Heptagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Octagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Nonagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Decagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Undecagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Dodecagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Tridecagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Tetradecagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Pentadecagon":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Trapezoid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Ellipse":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Polyomino":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Star":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Semicircle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Squircle":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Parallelogram":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Annulus":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Kite":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Area - Rhombus":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Cube":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Rectangular prism":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Sphere":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Cylinder":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Cone":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Dodecahedron":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Isosceles triangular prism":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Scalene triangular prism":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Equilateral triangular prism":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Hemisphere":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Torus":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Rhombicosidodecahedron":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Snub cube":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Capsule":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Tetrahedron":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Octahedron":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Icosahedron":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Isosceles triangular pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Scalene triangular pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Equilateral triangular pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Square pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Pentagonal pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Hexagonal pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Heptagonal pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Octagonal pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Nonagonal pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Decagonal pyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Star prism":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Isosceles triangular bipyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Scalene triangular bipyramid":
             pass
-        elif mainshape.shape in square:
+        elif mainshape.shape in u"Volume - Equilateral triangular bipyramid":
             pass
-        elif mainshape.shape in square:
-            pass
-        elif mainshape.shape in square:
-            pass
-        elif mainshape.shape in square:
-            pass
-        elif mainshape.shape in square:
-            pass
-        elif mainshape.shape in square:
-            pass
-        elif mainshape.shape in square:
-            pass
-        elif mainshape.shape in square:
-            pass
+        else:
+            self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Error", None))
         
     def update_shape(self, shape):
         Curr_shape = shape
@@ -719,4 +709,3 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
-    

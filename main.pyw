@@ -1090,9 +1090,9 @@ class MainWindow(QMainWindow):
             elif a == False and b == True:
                 self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Amount of squares is not a valid", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Square side length is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Square side length nor amount of squares is a valid number", None))
         elif mainvar.shape == u"Area - Star":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1116,11 +1116,11 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Amoumt of points is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Side length is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Amount of points nor side length is a valid number", None))
         elif mainvar.shape == u"Area - Semicircle":
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1143,7 +1143,7 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             else:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Side length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Radius is not a valid number", None))
         elif mainvar.shape == u"Area - Squircle":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1169,9 +1169,9 @@ class MainWindow(QMainWindow):
             elif a == False and b == True:
                 self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Rounding radius is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor rounding radius is a valid number", None))
         elif mainvar.shape == u"Area - Parallelogram":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1195,11 +1195,11 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Bottom length is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Bottom length nor height is a valid number", None))
         elif mainvar.shape == u"Area - Annulus":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1223,11 +1223,11 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Inner circle radius is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Outer circle radius is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Inner circle radius nor outer circle radius is a valid number", None))
         elif mainvar.shape == u"Area - Kite":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1251,15 +1251,14 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"First diagonal is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Second diagonal is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"First diagonal nor second diagonal is a valid number", None))
         elif mainvar.shape == u"Area - Rhombus":
             a = is_number(self.ui.Input1.toPlainText())
-            b = is_number(self.ui.Input2.toPlainText())
-            if a == True and b == True:
+            if a == True:
                 if mainvar.units == u"Inches":
                     pass
                 if mainvar.units == u"Feet":
@@ -1279,11 +1278,7 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
-            elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
-            elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Diagonal is not a valid number", None))
         elif mainvar.shape == u"Volume - Cube":
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1306,7 +1301,7 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             else:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Side length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Edge length is not a valid number", None))
         elif mainvar.shape == u"Volume - Rectangular prism":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1331,19 +1326,19 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True and c == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
             elif a == True and b == False and c == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is not a valiv number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valiv number", None))
             elif a == True and b == True and c == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length nor height is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is a valid number", None))
             elif a == False and b == False and c == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length nor height is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
             elif a == False and b == True and c == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor height is a valid number", None))
             elif a == True and b == False and c == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width nor height is a valid number", None))
             elif a == False and b == False and c == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length nor height is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length, width, and height are valid numbers", None))
         elif mainvar.shape == u"Volume - Sphere":
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1366,7 +1361,7 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             else:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Side length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Radius is not a valid number", None))
         elif mainvar.shape == u"Volume - Cylinder":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1390,11 +1385,11 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Radius is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Radius nor height is a valid number", None))
         elif mainvar.shape == u"Volume - Cone":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1418,11 +1413,11 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Radius is not a valid number", None))
             elif a == True and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is not a valid number", None))
             elif a == False and b == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor width is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Radius nor height is a valid number", None))
         elif mainvar.shape == u"Volume - Dodecahedron":
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1445,7 +1440,7 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             else:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Side length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Edge length is not a valid number", None))
         elif mainvar.shape == u"Volume - Isosceles triangular prism":
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1470,15 +1465,15 @@ class MainWindow(QMainWindow):
                 if mainvar.units == u"None":
                     pass
             elif a == False and b == True and c == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length is not a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length is not a valid number", None))
             elif a == True and b == False and c == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is not a valiv number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Width is not a valiv number", None))
             elif a == True and b == True and c == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length nor height is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height is a valid number", None))
             elif a == False and b == False and c == True:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length nor height is a valid number", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor Widtg is a valid number", None))
             elif a == False and b == True and c == False:
-                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Base length", None))
+                self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Length nor height is a valid number", None))
             elif a == True and b == False and c == False:
                 self.ui.answer.setText(QCoreApplication.translate("MainWindow", u"Height", None))
             elif a == False and b == False and c == False:

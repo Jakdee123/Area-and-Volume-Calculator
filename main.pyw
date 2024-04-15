@@ -587,94 +587,148 @@ class MainWindow(QMainWindow):
         if mainvar.shape == u'Area - Square':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.square(float(a))
+                    self.ui.answer.setText("Square area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Rectangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.rectangle(float(a), float(b))
+                    self.ui.answer.setText("Rectangle area: " + str(ans))
                 pass
         elif mainvar.shape == u'Area - Circle':
             a = is_number(self.ui.Input2.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.circle(float(a))
+                    self.ui.answer.setText("Circle area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Isosceles triangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
+            c = is_number(self.ui.Input3.toPlainText())
+            d = is_number(self.ui.Input4.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.isosceles_triangle(float(a), float(b))
+                    self.ui.answer.setText("Isosceles triangle area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Scalene triangle':
@@ -682,300 +736,469 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.scalene_triangle(float(a), float(b), float(c))
+                    self.ui.answer.setText("Scalene triangle area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Equilateral triangle':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.equilateral_triangle(float(a))
+                    self.ui.answer.setText("Equilateral triangle area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Pentagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.pentagon(float(a))
+                    self.ui.answer.setText("Pentagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Hexagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.hexagon(float(a))
+                    self.ui.answer.setText("Hexagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Heptagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.heptagon(float(a))
+                    self.ui.answer.setText("Heptagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Octagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.octagon(float(a))
+                    self.ui.answer.setText("Octagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Nonagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.nonagon(float(a))
+                    self.ui.answer.setText("Nonagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Decagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.decagon(float(a))
+                    self.ui.answer.setText("Decagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Undecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.undecagon(float(a))
+                    self.ui.answer.setText("Undecagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Dodecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.dodecagon(float(a))
+                    self.ui.answer.setText("Dodecagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Tridecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.tridecagon(float(a))
+                    self.ui.answer.setText("Tridecagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Tetradecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.tetradecagon(float(a))
+                    self.ui.answer.setText("Tetradecagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Pentadecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.pentadecagon(float(a))
+                    self.ui.answer.setText("Pentadecagon area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Trapezoid':

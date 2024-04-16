@@ -2094,78 +2094,104 @@ class MainWindow(QMainWindow):
                 c = self.ui.Input3.toPlainText()
                 d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    ans = _3D.tetrahedron(float(a))
-                    self.ui.answer.setText("cube volume: " + str(ans) + u" in³")
+                    ans = _3D.octahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    ans = _3D.tetrahedron(float(a))
+                    ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans))
             else:
                 self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
         elif mainvar.shape == u'Volume - Octahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.octrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Octahedron volume: " + str(ans))
             else:
                 self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
         elif mainvar.shape == u'Volume - Icosahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.icosahedron(float(a))
+                    self.ui.answer.setText("Icosahedron volume: " + str(ans))
             else:
                 self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
         elif mainvar.shape == u'Volume - Isosceles triangular pyramid':
@@ -2173,24 +2199,37 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Scalene triangular pyramid':

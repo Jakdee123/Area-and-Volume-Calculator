@@ -1206,191 +1206,295 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.trapezoid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Trapezoid area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Ellipse':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.ellipse(float(a), float(b))
+                    self.ui.answer.setText("Ellipse area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Polyomino':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.polyomino(float(a), float(b))
+                    self.ui.answer.setText("Polyomino area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Star':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.star(float(a), float(b))
+                    self.ui.answer.setText("Star area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Semicircle':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.semicircle(float(a))
+                    self.ui.answer.setText("Semicircle area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Squircle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.squircle(float(a), float(b))
+                    self.ui.answer.setText("Squircle area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Parallelogram':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.parallelogram(float(a), float(b))
+                    self.ui.answer.setText("Parallelogram area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Annulus':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.annulus(float(a), float(b))
+                    self.ui.answer.setText("Annulus area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Kite':

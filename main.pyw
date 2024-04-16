@@ -159,12 +159,12 @@ class _3D:
         return (1 / 3) * _2D.decagon(float(bel)) * float(h)
     def star_prism(bnop, bel, h):
         return _2D.star(float(bnop), float(bel)) * float(h)
-    def isosceles_triangular_bipyramid(mpb, w, cta):
-        return ((1 / 3) * _2D.isosceles_triangle(float(mpb), float(w)) * float(cta)) * 2
-    def scalene_triangular_bipyramid(mpa, mpb, mpc, cta):
-        return ((1 / 3) * _2D.scalene_triangle(float(mpa), float(mpb), float(mpc)) * float(cta)) * 2
-    def equilateral_triangular_bipyramid(mpel, cta):
-        return ((1 / 3) * _2D.equilateral_triangle(float(mpel)) * float(cta)) * 2 
+    def isosceles_triangular_bipyramid(l, w, h):
+        h2 = float(h) / 2
+        return 2 * _3D.isosceles_triangular_pyramid(float(l), float(w), h2)
+    def equilateral_triangular_bipyramid(lw, h):
+        h2 = float(h) / 2
+        return 2 * _3D.equilateral_triangular_pyramid(float(lw), h2) 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -194,7 +194,6 @@ class Ui_MainWindow(object):
         self.title.setScaledContents(True)
         self.title.setAlignment(Qt.AlignCenter)
         self.comboBox_2 = QComboBox(self.centralwidget)
-        self.comboBox_2.addItem('')
         self.comboBox_2.addItem('')
         self.comboBox_2.addItem('')
         self.comboBox_2.addItem('')
@@ -546,8 +545,7 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(53, QCoreApplication.translate('MainWindow', u'Volume - Decagonal pyramid', None))
         self.comboBox_2.setItemText(54, QCoreApplication.translate('MainWindow', u'Volume - Star prism', None))
         self.comboBox_2.setItemText(55, QCoreApplication.translate('MainWindow', u'Volume - Isosceles triangular bipyramid', None))
-        self.comboBox_2.setItemText(56, QCoreApplication.translate('MainWindow', u'Volume - Scalene triangular bipyramid', None))
-        self.comboBox_2.setItemText(57, QCoreApplication.translate('MainWindow', u'Volume - Equilateral triangular bipyramid', None))
+        self.comboBox_2.setItemText(56, QCoreApplication.translate('MainWindow', u'Volume - Equilateral triangular bipyramid', None))
 
         self.comboBox_3.setItemText(0, QCoreApplication.translate('MainWindow', u'Inches', None))
         self.comboBox_3.setItemText(1, QCoreApplication.translate('MainWindow', u'Feet', None))
@@ -2238,216 +2236,333 @@ class MainWindow(QMainWindow):
             c = is_number(self.ui.Input3.toPlainText())
             d = is_number(self.ui.Input4.toPlainText())
             if a == True and b == True and c == True and d == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Equilateral triangular pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Square pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.square_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Square pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Pentagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.pentagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Hexagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.hexagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Heptagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.heptagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Octagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.octagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Octagonal pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Nonagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.nonagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Decagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.decagon_pyramid(float(a), float(b))
+                    self.ui.answer.setText("Decagonal pyramid volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Star prism':
@@ -2480,32 +2595,6 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
-                if mainvar.unit == u'Inches':
-                    pass
-                if mainvar.unit == u'Feet':
-                    pass
-                if mainvar.unit == u'Yards':
-                    pass
-                if mainvar.unit == u'Miles':
-                    pass
-                if mainvar.unit == u'Millimeters':
-                    pass
-                if mainvar.unit == u'Centimeters':
-                    pass
-                if mainvar.unit == u'Meters':
-                    pass
-                if mainvar.unit == u'Kilometers':
-                    pass
-                if mainvar.unit == u'None':
-                    pass
-            else:
-                pass
-        elif mainvar.shape == u'Volume - Scalene triangular bipyramid':
-            a = is_number(self.ui.Input1.toPlainText())
-            b = is_number(self.ui.Input2.toPlainText())
-            c = is_number(self.ui.Input3.toPlainText())
-            d = is_number(self.ui.Input4.toPlainText())
-            if a == True and b == True and c == True and d == True:
                 if mainvar.unit == u'Inches':
                     pass
                 if mainvar.unit == u'Feet':

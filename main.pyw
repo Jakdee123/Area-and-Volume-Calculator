@@ -2570,24 +2570,37 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.star_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Star prism volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Isosceles triangular bipyramid':
@@ -2595,24 +2608,37 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans))
             else:
                 pass
             
@@ -2620,24 +2646,37 @@ class MainWindow(QMainWindow):
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans))
             else:
                 pass
         else:
@@ -2647,6 +2686,120 @@ class MainWindow(QMainWindow):
         Curr_shape = shape
         mainvar.shape = Curr_shape
         print('Curr_shape updated to:', Curr_shape)
+        if mainvar.shape == u'Area - Square':
+            pass
+        elif mainvar.shape == u'Area - Rectangle':
+            pass
+        elif mainvar.shape == u'Area - Circle':
+            pass
+        elif mainvar.shape == u'Area - Isosceles triangle':
+            pass
+        elif mainvar.shape == u'Area - Scalene triangle':
+            pass
+        elif mainvar.shape == u'Area - Equilateral triangle':
+            pass
+        elif mainvar.shape == u'Area - Pentagon':
+            pass
+        elif mainvar.shape == u'Area - Hexagon':
+            pass
+        elif mainvar.shape == u'Area - Heptagon':
+            pass
+        elif mainvar.shape == u'Area - Octagon':
+            pass
+        elif mainvar.shape == u'Area - Nonagon':
+            pass
+        elif mainvar.shape == u'Area - Decagon':
+            pass
+        elif mainvar.shape == u'Area - Undecagon':
+            pass
+        elif mainvar.shape == u'Area - Dodecagon':
+            pass
+        elif mainvar.shape == u'Area - Tridecagon':
+            pass
+        elif mainvar.shape == u'Area - Tetradecagon':
+            pass
+        elif mainvar.shape == u'Area - Pentadecagon':
+            pass
+        elif mainvar.shape == u'Area - Trapezoid':
+            pass
+        elif mainvar.shape == u'Area - Ellipse':
+            pass
+        elif mainvar.shape == u'Area - Polyomino':
+            pass
+        elif mainvar.shape == u'Area - Star':
+            pass
+        elif mainvar.shape == u'Area - Semicircle':
+            pass
+        elif mainvar.shape == u'Area - Squircle':
+            pass
+        elif mainvar.shape == u'Area - Parallelogram':
+            pass
+        elif mainvar.shape == u'Area - Annulus':
+            pass
+        elif mainvar.shape == u'Area - Kite':
+            pass
+        elif mainvar.shape == u'Area - Rhombus':
+            pass
+        elif mainvar.shape == u'Volume - Cube':
+            pass
+        elif mainvar.shape == u'Volume - Rectangular prism':
+            pass
+        elif mainvar.shape == u'Volume - Sphere':
+            pass
+        elif mainvar.shape == u'Volume - Cylinder':
+            pass
+        elif mainvar.shape == u'Volume - Cone':
+            pass
+        elif mainvar.shape == u'Volume - Dodecahedron':
+            pass
+        elif mainvar.shape == u'Volume - Isosceles triangular prism':
+            pass
+        elif mainvar.shape == u'Volume - Scalene triangular prism':
+            pass
+        elif mainvar.shape == u'Volume - Equilateral triangular prism':
+            pass
+        elif mainvar.shape == u'Volume - Hemisphere':
+            pass
+        elif mainvar.shape == u'Volume - Torus':
+            pass
+        elif mainvar.shape == u'Volume - Rhombicosidodecahedron':
+            pass
+        elif mainvar.shape == u'Volume - Snub cube':
+            pass
+        elif mainvar.shape == u'Volume - Capsule':
+            pass
+        elif mainvar.shape == u'Volume - Tetrahedron':
+            pass
+        elif mainvar.shape == u'Volume - Octahedron':
+            pass
+        elif mainvar.shape == u'Volume - Icosahedron':
+            pass
+        elif mainvar.shape == u'Volume - Isosceles triangular pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Scalene triangular pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Equilateral triangular pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Square pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Pentagonal pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Hexagonal pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Heptagonal pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Octagonal pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Nonagonal pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Decagonal pyramid':
+            pass
+        elif mainvar.shape == u'Volume - Star prism':
+            pass
+        elif mainvar.shape == u'Volume - Isosceles triangular bipyramid':
+            pass
+        elif mainvar.shape == u'Volume - Equilateral triangular bipyramid':
+            pass
 
     def update_units(self, text):
         # Update the variable mainvar.units_ans with the selected mainvar.units

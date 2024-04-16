@@ -1581,7 +1581,7 @@ class MainWindow(QMainWindow):
                     ans = _3D.cube(float(a))
                     self.ui.answer.setText("Cube volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    ans = __3D.cube(float(a))
+                    ans = _3D.cube(float(a))
                     self.ui.answer.setText("Cube volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
                     ans = _3D.cube(float(a))
@@ -1684,71 +1684,110 @@ class MainWindow(QMainWindow):
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.cylinder(float(a), float(b))
+                    self.ui.answer.setText("Cylinder volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Cone':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.cone(float(a), float(b))
+                    self.ui.answer.setText("Cone volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Dodecahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.dodecahedron(float(a))
+                    self.ui.answer.setText("Dodecahedron volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Isosceles triangular prism':
@@ -1756,24 +1795,37 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Scalene triangular prism':
@@ -1782,188 +1834,292 @@ class MainWindow(QMainWindow):
             c = is_number(self.ui.Input3.toPlainText())
             d = is_number(self.ui.Input4.toPlainText())
             if a == True and b == True and c == True and d == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
+                    self.ui.answer.setText("Scalene triangular prism volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Equilateral triangular prism':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.equlateral_triangular_prism(float(a), float(b))
+                    self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Hemisphere':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.hemisphere(float(a))
+                    self.ui.answer.setText("Hemisphere volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Torus':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.torus(float(a), float(b))
+                    self.ui.answer.setText("Torus volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Rhombicosidodecahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.rhombicosidodecahedron(float(a))
+                    self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Snub cube':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.snub_cube(float(a))
+                    self.ui.answer.setText("Snub cube volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Capsule':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.capsule(float(a), float(b))
+                    self.ui.answer.setText("Capsule volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Tetrahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("cube volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.tetrahedron(float(a))
+                    self.ui.answer.setText("Tetrahedron volume: " + str(ans))
             else:
                 self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
         elif mainvar.shape == u'Volume - Octahedron':

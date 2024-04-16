@@ -657,7 +657,7 @@ class MainWindow(QMainWindow):
                     self.ui.answer.setText("Rectangle area: " + str(ans))
                 pass
         elif mainvar.shape == u'Area - Circle':
-            a = is_number(self.ui.Input2.toPlainText())
+            a = is_number(self.ui.Input1.toPlainText())
             if a == True:
                 a = self.ui.Input1.toPlainText()
                 b = self.ui.Input2.toPlainText()
@@ -691,7 +691,7 @@ class MainWindow(QMainWindow):
                     ans = _2D.circle(float(a))
                     self.ui.answer.setText("Circle area: " + str(ans))
             else:
-                pass
+                print("Invalid")
         elif mainvar.shape == u'Area - Isosceles triangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1501,70 +1501,109 @@ class MainWindow(QMainWindow):
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
             if a == True and b == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.kite(float(a), float(b))
+                    self.ui.answer.setText("Kite area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Area - Rhombus':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" in²")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" ft²")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" yd²")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" mi²")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" mm²")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" cm²")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" m²")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans) + u" km²")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _2D.rhombus(float(a))
+                    self.ui.answer.setText("Rhombus area: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Cube':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = __3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.cube(float(a))
+                    self.ui.answer.setText("Cube volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Rectangular prism':
@@ -1572,47 +1611,73 @@ class MainWindow(QMainWindow):
             b = is_number(self.ui.Input2.toPlainText())
             c = is_number(self.ui.Input3.toPlainText())
             if a == True and b == True and c == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.rectangular_prism(float(a), float(b), float(c))
+                    self.ui.answer.setText("Rectangular prism volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Sphere':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
+                a = self.ui.Input1.toPlainText()
+                b = self.ui.Input2.toPlainText()
+                c = self.ui.Input3.toPlainText()
+                d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    pass
+                    ans = _3D.sphere(float(a))
+                    self.ui.answer.setText("Sphere volume: " + str(ans))
             else:
                 pass
         elif mainvar.shape == u'Volume - Cylinder':

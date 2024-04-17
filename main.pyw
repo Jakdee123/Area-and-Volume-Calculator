@@ -479,6 +479,12 @@ class Ui_MainWindow(object):
         self.Input4Label.setGeometry(QRect(270, 110, 91, 20))
         self.Input4Label.setAlignment(Qt.AlignCenter)
         MainWindow.setCentralWidget(self.centralwidget)
+        self.Input2.setReadOnly(True)
+        self.Input3.setReadOnly(True)
+        self.Input4.setReadOnly(True)
+        self.Input2Label.setText("")
+        self.Input3Label.setText("")
+        self.Input4Label.setText("")
 
         self.retranslateUi(MainWindow)
 
@@ -689,7 +695,7 @@ class MainWindow(QMainWindow):
                     ans = _2D.circle(float(a))
                     self.ui.answer.setText("Circle area: " + str(ans))
             else:
-                print("Invalid")
+                pass
         elif mainvar.shape == u'Area - Isosceles triangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2685,126 +2691,523 @@ class MainWindow(QMainWindow):
     def update_shape(self, shape):
         Curr_shape = shape
         mainvar.shape = Curr_shape
-        print('Curr_shape updated to:', Curr_shape)
         if mainvar.shape == u'Area - Square':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Rectangle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length:")
+            self.ui.Input2Label.setText("Width:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Circle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Radius:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Isosceles triangle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base length:")
+            self.ui.Input2Label.setText("Height:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Scalene triangle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side A length:")
+            self.ui.Input2Label.setText("Side B length:")
+            self.ui.Input3Label.setText("Side C length:")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Equilateral triangle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Pentagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Hexagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Heptagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Octagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Nonagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Decagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Undecagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Dodecagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Tridecagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Tetradecagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Pentadecagon':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Side length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Trapezoid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Left side length:")
+            self.ui.Input2Label.setText("Right side length:")
+            self.ui.Input3Label.setText("Height")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Ellipse':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Radius A:")
+            self.ui.Input2Label.setText("Radius B:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Polyomino':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Amount of squares:")
+            self.ui.Input2Label.setText("Square side length:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Star':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Amount of points:")
+            self.ui.Input2Label.setText("Side length:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Semicircle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Radius:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Squircle':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length/width:")
+            self.ui.Input2Label.setText("Rounding radius:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Parallelogram':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Annulus':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Inner circle radius:")
+            self.ui.Input2Label.setText("Full radius:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Kite':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Diagonal:")
+            self.ui.Input2Label.setText("Other diagonal:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Area - Rhombus':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Diagonal:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Cube':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Rectangular prism':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length:")
+            self.ui.Input2Label.setText("Width:")
+            self.ui.Input3Label.setText("Height:")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Sphere':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Radius:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Cylinder':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base radius:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Cone':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base radius:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Dodecahedron':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Isosceles triangular prism':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length:")
+            self.ui.Input2Label.setText("Width:")
+            self.ui.Input3Label.setText("Height:")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Scalene triangular prism':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(False)
+            self.ui.Input1Label.setText("Base side A length:")
+            self.ui.Input2Label.setText("Base side B length:")
+            self.ui.Input3Label.setText("Base side C length:")
+            self.ui.Input4Label.setText("Height")
         elif mainvar.shape == u'Volume - Equilateral triangular prism':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length/width:")
+            self.ui.Input2Label.setText("Height:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Hemisphere':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Radius:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Torus':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Major radius:")
+            self.ui.Input2Label.setText("Minor radius")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Rhombicosidodecahedron':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Snub cube':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Capsule':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Main cylinder length:")
+            self.ui.Input2Label.setText("Main cylinder radius")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Tetrahedron':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Octahedron':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Icosahedron':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(True)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Edge length:")
+            self.ui.Input2Label.setText("")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Isosceles triangular pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length:")
+            self.ui.Input2Label.setText("Width:")
+            self.ui.Input3Label.setText("Height:")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Scalene triangular pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(False)
+            self.ui.Input1Label.setText("Base side A length:")
+            self.ui.Input2Label.setText("Base side B length:")
+            self.ui.Input3Label.setText("Base side C length:")
+            self.ui.Input4Label.setText("Height")
         elif mainvar.shape == u'Volume - Equilateral triangular pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length/width:")
+            self.ui.Input2Label.setText("Height:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Square pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Pentagonal pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Hexagonal pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Heptagonal pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Octagonal pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Nonagonal pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Decagonal pyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Base side length:")
+            self.ui.Input2Label.setText("Height")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Star prism':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Amount of points on base:")
+            self.ui.Input2Label.setText("Base side length")
+            self.ui.Input3Label.setText("Height")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Isosceles triangular bipyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(False)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length:")
+            self.ui.Input2Label.setText("Width:")
+            self.ui.Input3Label.setText("Height:")
+            self.ui.Input4Label.setText("")
         elif mainvar.shape == u'Volume - Equilateral triangular bipyramid':
-            pass
+            self.ui.Input1.setReadOnly(False)
+            self.ui.Input2.setReadOnly(False)
+            self.ui.Input3.setReadOnly(True)
+            self.ui.Input4.setReadOnly(True)
+            self.ui.Input1Label.setText("Length/width:")
+            self.ui.Input2Label.setText("Height:")
+            self.ui.Input3Label.setText("")
+            self.ui.Input4Label.setText("")
 
     def update_units(self, text):
         # Update the variable mainvar.units_ans with the selected mainvar.units
         mainvar.unit = text
-        print('mainvar.units_ans updated to:', mainvar.unit)  # Debugging purpose, you can remove this line
 
 if __name__ == '__main__':
     import sys

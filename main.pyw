@@ -11,6 +11,70 @@ from mpmath import *
 global lang
 lang = 'English'
 
+def detect_variables_2(a, b):
+    true_count = 0
+    false_count = 0
+    
+    if a:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    if b:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    return true_count, false_count
+
+def detect_variables_3(a, b, c):
+    true_count = 0
+    false_count = 0
+    
+    if a:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    if b:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    if c:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    return true_count, false_count
+
+def detect_variables_4(a, b, c, d):
+    true_count = 0
+    false_count = 0
+    
+    if a:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    if b:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    if c:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    if d:
+        true_count += 1
+    else:
+        false_count += 1
+    
+    return true_count, false_count
+
+
 class mainvar:
     shape = 'Area - Square'
     unit = 'Inches'
@@ -623,7 +687,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.square(float(a))
                     self.ui.answer.setText("Square area: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Rectangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -659,7 +725,15 @@ class MainWindow(QMainWindow):
                 if mainvar.unit == u'None':
                     ans = _2D.rectangle(float(a), float(b))
                     self.ui.answer.setText("Rectangle area: " + str(ans))
-                pass
+            else:
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are not a valid numbers')
         elif mainvar.shape == u'Area - Circle':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -695,12 +769,12 @@ class MainWindow(QMainWindow):
                     ans = _2D.circle(float(a))
                     self.ui.answer.setText("Circle area: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Isosceles triangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
-            c = is_number(self.ui.Input3.toPlainText())
-            d = is_number(self.ui.Input4.toPlainText())
             if a == True and b == True:
                 a = self.ui.Input1.toPlainText()
                 b = self.ui.Input2.toPlainText()
@@ -734,7 +808,13 @@ class MainWindow(QMainWindow):
                     ans = _2D.isosceles_triangle(float(a), float(b))
                     self.ui.answer.setText("Isosceles triangle area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are not valid numbers')
         elif mainvar.shape == u'Area - Scalene triangle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -772,7 +852,19 @@ class MainWindow(QMainWindow):
                     ans = _2D.scalene_triangle(float(a), float(b), float(c))
                     self.ui.answer.setText("Scalene triangle area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_3(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are not valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not valid numbers')
         elif mainvar.shape == u'Area - Equilateral triangle':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -808,7 +900,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.equilateral_triangle(float(a))
                     self.ui.answer.setText("Equilateral triangle area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Pentagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -844,7 +938,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.pentagon(float(a))
                     self.ui.answer.setText("Pentagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Hexagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -880,7 +976,8 @@ class MainWindow(QMainWindow):
                     ans = _2D.hexagon(float(a))
                     self.ui.answer.setText("Hexagon area: " + str(ans))
             else:
-                pass
+                a = self.ui.Input1.toPlainText()
+                self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Heptagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -916,7 +1013,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.heptagon(float(a))
                     self.ui.answer.setText("Heptagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Octagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -952,7 +1051,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.octagon(float(a))
                     self.ui.answer.setText("Octagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Nonagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -988,7 +1089,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.nonagon(float(a))
                     self.ui.answer.setText("Nonagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Decagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1024,7 +1127,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.decagon(float(a))
                     self.ui.answer.setText("Decagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Undecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1060,7 +1165,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.undecagon(float(a))
                     self.ui.answer.setText("Undecagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Dodecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1096,7 +1203,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.dodecagon(float(a))
                     self.ui.answer.setText("Dodecagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Tridecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1132,7 +1241,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.tridecagon(float(a))
                     self.ui.answer.setText("Tridecagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Tetradecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1168,7 +1279,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.tetradecagon(float(a))
                     self.ui.answer.setText("Tetradecagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Pentadecagon':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1204,7 +1317,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.pentadecagon(float(a))
                     self.ui.answer.setText("Pentadecagon area: " + str(ans))
             else:
-                pass
+                if (a == True):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Trapezoid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1242,7 +1357,19 @@ class MainWindow(QMainWindow):
                     ans = _2D.trapezoid(float(a), float(b), float(c))
                     self.ui.answer.setText("Trapezoid area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_3(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input1.toPlainText()
+                    c = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not valid numbers')
         elif mainvar.shape == u'Area - Ellipse':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1279,7 +1406,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.ellipse(float(a), float(b))
                     self.ui.answer.setText("Ellipse area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbera')
         elif mainvar.shape == u'Area - Polyomino':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1316,7 +1450,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.polyomino(float(a), float(b))
                     self.ui.answer.setText("Polyomino area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Area - Star':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1353,7 +1494,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.star(float(a), float(b))
                     self.ui.answer.setText("Star area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Area - Semicircle':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1389,7 +1537,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.semicircle(float(a))
                     self.ui.answer.setText("Semicircle area: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Area - Squircle':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1426,7 +1576,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.squircle(float(a), float(b))
                     self.ui.answer.setText("Squircle area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Area - Parallelogram':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1463,7 +1620,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.parallelogram(float(a), float(b))
                     self.ui.answer.setText("Parallelogram area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Area - Annulus':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1500,7 +1664,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.annulus(float(a), float(b))
                     self.ui.answer.setText("Annulus area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Area - Kite':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1537,7 +1708,14 @@ class MainWindow(QMainWindow):
                     ans = _2D.kite(float(a), float(b))
                     self.ui.answer.setText("Kite area: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Area - Rhombus':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1573,7 +1751,9 @@ class MainWindow(QMainWindow):
                     ans = _2D.rhombus(float(a))
                     self.ui.answer.setText("Rhombus area: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Cube':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1609,7 +1789,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.cube(float(a))
                     self.ui.answer.setText("Cube volume: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Rectangular prism':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1647,7 +1829,19 @@ class MainWindow(QMainWindow):
                     ans = _3D.rectangular_prism(float(a), float(b), float(c))
                     self.ui.answer.setText("Rectangular prism volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_3(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not a valid numbers')
         elif mainvar.shape == u'Volume - Sphere':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1683,7 +1877,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.sphere(float(a))
                     self.ui.answer.setText("Sphere volume: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Cylinder':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1720,7 +1916,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.cylinder(float(a), float(b))
                     self.ui.answer.setText("Cylinder volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Cone':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1757,7 +1960,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.cone(float(a), float(b))
                     self.ui.answer.setText("Cone volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Dodecahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1793,7 +2003,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.dodecahedron(float(a))
                     self.ui.answer.setText("Dodecahedron volume: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Isosceles triangular prism':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1831,7 +2043,19 @@ class MainWindow(QMainWindow):
                     ans = _3D.isosceles_triangular_prism(float(a), float(b), float(c))
                     self.ui.answer.setText("Isosceles triangular prism volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not a valid numbers')
         elif mainvar.shape == u'Volume - Scalene triangular prism':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1870,7 +2094,25 @@ class MainWindow(QMainWindow):
                     ans = _3D.scalene_triangular_prism(float(a), float(b), float(c), float(d))
                     self.ui.answer.setText("Scalene triangular prism volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b, c, d)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not a valid numbers')
+                elif (fal == 4):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    d = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", "{c}", and "{d}" are not a valid numbers')
         elif mainvar.shape == u'Volume - Equilateral triangular prism':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1907,7 +2149,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.equlateral_triangular_prism(float(a), float(b))
                     self.ui.answer.setText("Equilateral triangular prism volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Hemisphere':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -1943,7 +2192,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.hemisphere(float(a))
                     self.ui.answer.setText("Hemisphere volume: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Torus':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -1980,7 +2231,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.torus(float(a), float(b))
                     self.ui.answer.setText("Torus volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Rhombicosidodecahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -2016,7 +2274,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.rhombicosidodecahedron(float(a))
                     self.ui.answer.setText("Rhombicosidodecahedron volume: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Snub cube':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -2052,7 +2312,10 @@ class MainWindow(QMainWindow):
                     ans = _3D.snub_cube(float(a))
                     self.ui.answer.setText("Snub cube volume: " + str(ans))
             else:
-                pass
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+
         elif mainvar.shape == u'Volume - Capsule':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2089,7 +2352,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.capsule(float(a), float(b))
                     self.ui.answer.setText("Capsule volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Tetrahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -2125,7 +2395,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.octahedron(float(a))
                     self.ui.answer.setText("Tetrahedron volume: " + str(ans))
             else:
-                self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Octahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -2161,7 +2433,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.tetrahedron(float(a))
                     self.ui.answer.setText("Octahedron volume: " + str(ans))
             else:
-                self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Icosahedron':
             a = is_number(self.ui.Input1.toPlainText())
             if a == True:
@@ -2197,7 +2471,9 @@ class MainWindow(QMainWindow):
                     ans = _3D.icosahedron(float(a))
                     self.ui.answer.setText("Icosahedron volume: " + str(ans))
             else:
-                self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'"Side length" is not a valid number', None))
+                if (a == False):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
         elif mainvar.shape == u'Volume - Isosceles triangular pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2235,7 +2511,19 @@ class MainWindow(QMainWindow):
                     ans = _3D.isosceles_triangular_pyramid(float(a), float(b), float(c))
                     self.ui.answer.setText("Isosceles triangular pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_3(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not a valid numbers')
         elif mainvar.shape == u'Volume - Scalene triangular pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2247,34 +2535,46 @@ class MainWindow(QMainWindow):
                 c = self.ui.Input3.toPlainText()
                 d = self.ui.Input4.toPlainText()
                 if mainvar.unit == u'Inches':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" in³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" in³")
                 if mainvar.unit == u'Feet':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" ft³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" ft³")
                 if mainvar.unit == u'Yards':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" yd³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" yd³")
                 if mainvar.unit == u'Miles':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" mi³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" mi³")
                 if mainvar.unit == u'Millimeters':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" mm³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" mm³")
                 if mainvar.unit == u'Centimeters':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" cm³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" cm³")
                 if mainvar.unit == u'Meters':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" m³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" m³")
                 if mainvar.unit == u'Kilometers':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans) + u" km³")
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans) + u" km³")
                 if mainvar.unit == u'None':
-                    ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
-                    self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans))
+                    ans = _3D.scalene_triangular_pyramid(float(a), float(b), float(c), float(b))
+                    self.ui.answer.setText("Scalene triangular pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_4(a, b, c, d)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", "{c}", and "{d}" are not valid numbers')
         elif mainvar.shape == u'Volume - Equilateral triangular pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2311,7 +2611,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.equlateral_triangular_pyramid(float(a), float(b))
                     self.ui.answer.setText("Equilateral triangular pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Square pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2348,7 +2655,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.square_pyramid(float(a), float(b))
                     self.ui.answer.setText("Square pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Pentagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2385,7 +2699,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.pentagon_pyramid(float(a), float(b))
                     self.ui.answer.setText("Pentagonal pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Hexagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2422,7 +2743,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.hexagon_pyramid(float(a), float(b))
                     self.ui.answer.setText("Hexagonal pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Heptagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2459,7 +2787,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.heptagon_pyramid(float(a), float(b))
                     self.ui.answer.setText("Heptagonal pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Octagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2496,7 +2831,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.octagon_pyramid(float(a), float(b))
                     self.ui.answer.setText("Octagonal pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Nonagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2533,7 +2875,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.nonagon_pyramid(float(a), float(b))
                     self.ui.answer.setText("Nonagonal pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Decagonal pyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2570,7 +2919,14 @@ class MainWindow(QMainWindow):
                     ans = _3D.decagon_pyramid(float(a), float(b))
                     self.ui.answer.setText("Decagonal pyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         elif mainvar.shape == u'Volume - Star prism':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2608,7 +2964,19 @@ class MainWindow(QMainWindow):
                     ans = _3D.star_prism(float(a), float(b), float(c))
                     self.ui.answer.setText("Star prism volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_3(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not a valid numbers')
         elif mainvar.shape == u'Volume - Isosceles triangular bipyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2646,8 +3014,19 @@ class MainWindow(QMainWindow):
                     ans = _3D.isosceles_triangular_bipyramid(float(a), float(b), float(c))
                     self.ui.answer.setText("Isosceles triangular bipyramid volume: " + str(ans))
             else:
-                pass
-            
+                tru, fal = detect_variables_2(a, b, c)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
+                elif (fal == 3):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    c = self.ui.Input3.toPlainText()
+                    self.ui.answer.setText(f'"{a}", "{b}", and "{c}" are not a valid numbers')
         elif mainvar.shape == u'Volume - Equilateral triangular bipyramid':
             a = is_number(self.ui.Input1.toPlainText())
             b = is_number(self.ui.Input2.toPlainText())
@@ -2684,9 +3063,16 @@ class MainWindow(QMainWindow):
                     ans = _3D.equilateral_triangular_bipyramid(float(a), float(b))
                     self.ui.answer.setText("Equilateral triangular bipyramid volume: " + str(ans))
             else:
-                pass
+                tru, fal = detect_variables_2(a, b)
+                if (fal == 1):
+                    a = self.ui.Input1.toPlainText()
+                    self.ui.answer.setText(f'"{a}" is not a valid number')
+                elif (fal == 2):
+                    a = self.ui.Input1.toPlainText()
+                    b = self.ui.Input2.toPlainText()
+                    self.ui.answer.setText(f'"{a}" nor "{b}" are valid numbers')
         else:
-            self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'Error', None))
+            self.ui.answer.setText(QCoreApplication.translate('MainWindow', u'Error. Please report to help.areavolumecalc@gmail.com', None))
         
     def update_shape(self, shape):
         Curr_shape = shape
